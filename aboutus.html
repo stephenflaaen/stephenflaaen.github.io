@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Civic Shift</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700;900&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'media', // Enable system-level dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#002868',
+                        'brand-red': '#BF0A30',
+                        'brand-yellow': '#DDBD09',
+                        'brand-copper': '#CE5C17',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                        raleway: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-merriweather { font-family: 'Merriweather', serif; }
+        .font-raleway { font-family: 'Raleway', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-700 font-raleway dark:bg-gray-900 dark:text-gray-300">
+
+    <header id="main-header" class="bg-white sticky top-0 z-50 transition-shadow duration-300 dark:bg-gray-800 dark:border-b dark:border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brand-blue font-montserrat dark:text-white">
+                <a href="#">[LOGO]</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Home</a>
+                <a href="competencydetails.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+                <a href="partners.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Partners</a>
+                <a href="aboutus.html" class="text-brand-blue font-bold dark:text-white">About Us</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="studentprofile.html" class="text-brand-blue hover:underline dark:text-blue-400 dark:hover:text-blue-300">Log In</a>
+                <a href="#" class="bg-brand-red text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition">Sign Up Now</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 dark:bg-gray-800">
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Home</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+            <a href="#" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Partners</a>
+            <a href="#" class="block py-2 text-brand-blue font-bold dark:text-white">About Us</a>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                <a href="studentprofile.html" class="block py-2 text-brand-blue dark:text-blue-400">Log In</a>
+                <a href="#" class="block mt-2 bg-brand-red text-white font-bold py-2 px-4 rounded-lg text-center">Sign Up Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-cover bg-center text-white" style="background-image: url('DesertBackground.jpg');">
+            <div class="absolute inset-0 bg-brand-blue opacity-80"></div>
+            <div class="relative container mx-auto px-6 py-24 text-center">
+                <h1 class="text-5xl md:text-6xl font-black font-montserrat mb-4">Our Mission</h1>
+                <p class="max-w-3xl mx-auto text-lg md:text-xl font-raleway font-light text-gray-200">The Civic Shift is about helping young people across Arizona connect with real civic learning and leadership opportunities. It brings together the incredible work already happening and helps students understand how these experiences build toward their growth as leaders, citizens, and changemakers.</p>
+            </div>
+        </section>
+
+        <section class="py-16 sm:py-24 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-4xl font-bold font-montserrat text-brand-blue dark:text-white mb-4">Our Story</h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-400">
+                        The Civic Shift is a statewide initiative helping students discover how civic experiences—like service, leadership programs, and community involvement—fit into a bigger journey of personal growth and civic identity.<br><br>
+While many strong programs already exist, fewer than 1 in 3 young people participate in leadership development by age 25, and only 23% of youth 16–24 engage in formal volunteering each year. The Civic Shift bridges those gaps by creating a connected ecosystem where students can explore, track, and personalize their civic learning.<br><br>
+Using a digital platform and a shared civic competency framework, we help young people collect experiences that shape who they are—building toward a “goal citizen” ready to lead in their community. Think of it like an estuary, where diverse streams of learning come together before students flow into the ocean of adulthood prepared to make a lasting impact.<br><br>
+At its core, this work is about designing, aligning, and improving collective actions to ensure youth gain the knowledge, ability, agency, and lifelong commitment to contribute to their communities and state. The long-term vision: Arizonans of all ages actively engaged in civic life, starting early and continuing throughout their lives.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <h2 class="text-4xl font-bold font-montserrat text-brand-blue dark:text-white mb-12">Our Team</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/200x200/DDBD09/002868?text=Team" alt="Team Member Photo" class="w-40 h-40 rounded-full mb-4 object-cover border-4 border-brand-yellow dark:border-brand-yellow">
+                            <h3 class="text-xl font-bold font-montserrat text-gray-800 dark:text-white">Alex Chen</h3>
+                            <p class="text-brand-copper font-medium">Executive Director</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/200x200/CE5C17/FFFFFF?text=Team" alt="Team Member Photo" class="w-40 h-40 rounded-full mb-4 object-cover border-4 border-brand-copper dark:border-brand-copper">
+                            <h3 class="text-xl font-bold font-montserrat text-gray-800 dark:text-white">Maria Garcia</h3>
+                            <p class="text-brand-copper font-medium">Program Manager</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <img src="https://placehold.co/200x200/BF0A30/FFFFFF?text=Team" alt="Team Member Photo" class="w-40 h-40 rounded-full mb-4 object-cover border-4 border-brand-red dark:border-brand-red">
+                            <h3 class="text-xl font-bold font-montserrat text-gray-800 dark:text-white">Jamal Williams</h3>
+                            <p class="text-brand-copper font-medium">Community Outreach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h4 class="text-2xl font-bold font-montserrat mb-4">[LOGO]</h4>
+                    <p class="text-gray-400">Short mission statement placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Explore</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Student Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Competency Details</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">For Organizations</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Become a Partner</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">[FB SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[Insta SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[X/Twitter SVG]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 py-6">
+                <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                    <p>&copy; 2025 Civic Shift. All Rights Reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Optional: Add a subtle shadow to the sticky header on scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                // adding shadow-md at all times in the HTML and upgrading to shadow-lg on scroll
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>

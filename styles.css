@@ -1,0 +1,90 @@
+/* ================================================================================
+Civic Shift - Global Stylesheet
+================================================================================
+*/
+
+/* --------------------------------------------------------------------------------
+FONTS & TYPOGRAPHY
+--------------------------------------------------------------------------------
+*/
+
+/* Applying custom fonts and colors based on the design document */
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #333;
+    background-color: #f9fafb; /* Equivalent to bg-gray-50 */
+    transition: color 0.3s, background-color 0.3s;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+h2, h3 {
+    font-weight: 700;
+}
+
+.font-merriweather {
+    font-family: 'Merriweather', serif;
+}
+
+
+/* --------------------------------------------------------------------------------
+BRAND COLORS
+--------------------------------------------------------------------------------
+Note: These classes are for use with Tailwind CSS. 
+If not using Tailwind, apply these properties directly.
+*/
+
+.bg-brand-blue { background-color: #002868; }
+.text-brand-blue { color: #002868; }
+.border-brand-blue { border-color: #002868; }
+
+.bg-brand-red { background-color: #BF0A30; }
+.text-brand-red { color: #BF0A30; }
+
+.bg-brand-yellow { background-color: #DDBD09; }
+.text-brand-yellow { color: #DDBD09; }
+
+.bg-brand-copper { background-color: #CE5C17; }
+.text-brand-copper { color: #CE5C17; }
+
+
+/* --------------------------------------------------------------------------------
+GLOBAL ELEMENTS
+--------------------------------------------------------------------------------
+*/
+
+/* Sticky Header Style */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* --------------------------------------------------------------------------------
+DARK MODE STYLES
+--------------------------------------------------------------------------------
+These styles are applied when the user's OS is in dark mode.
+Tailwind's `dark:` utility classes are the primary method for this,
+but these global styles can serve as a fallback.
+*/
+
+@media (prefers-color-scheme: dark) {
+    body {
+        /* Default dark mode text and background */
+        /* Note: These are overridden by Tailwind's dark: classes in the HTML */
+        color: #d1d5db; /* Tailwind gray-300 */
+        background-color: #111827; /* Tailwind gray-900 */
+    }
+
+    /* Use dark:text-white or similar in HTML instead of this */
+    .dark-mode-text {
+        color: #f9fafb; /* gray-50 */
+    }
+}

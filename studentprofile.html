@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile | Civic Shift</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700;900&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        darkMode: 'media', // or 'class'
+        theme: {
+          extend: {
+            colors: {
+              'brand-blue': '#002868',
+              'brand-red': '#BF0A30',
+              'brand-yellow': '#DDBD09',
+              'brand-copper': '#CE5C17',
+            },
+            fontFamily: {
+              montserrat: ['Montserrat', 'sans-serif'],
+              merriweather: ['Merriweather', 'serif'],
+              raleway: ['Raleway', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .progress-circle-bg {
+            stroke: #e5e7eb; /* gray-200 */
+        }
+        .progress-circle-fg {
+            stroke: #DDBD09; /* brand-yellow */
+            transition: stroke-dashoffset 0.5s ease-out;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+        }
+        .dark .progress-circle-bg {
+            stroke: #4b5563; /* gray-600 */
+        }
+    </style>
+
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 font-raleway antialiased">
+
+    <header id="main-header" class="bg-white sticky top-0 z-50 shadow-md dark:bg-gray-800 dark:border-b dark:border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brand-blue font-montserrat dark:text-white">
+                <a href="#">Civic Shift</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Home</a>
+                <a href="competencydetails.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+                <a href="partners.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Partners</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">About Us</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <span class="text-gray-700 dark:text-gray-300">Welcome, Alex!</span>
+                <a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300 text-sm">Log Out</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 dark:bg-gray-800">
+            <a href="home.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Home</a>
+            <a href="competencydetails.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+            <a href="partners.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Partners</a>
+            <a href="aboutus.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">About Us</a>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                <span class="block py-2 text-gray-700 dark:text-gray-300">Welcome, Alex!</span>
+                <a href="#" class="block py-2 text-brand-copper dark:text-yellow-400">Log Out</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-16">
+        
+        <section class="text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold font-montserrat text-brand-blue dark:text-white">Welcome Back, Alex!</h1>
+        </section>
+
+        <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2">
+                <section id="progress-dashboard">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+                        <h2 class="text-2xl md:text-3xl font-bold font-montserrat text-gray-800 dark:text-gray-100 mb-6">Your Civic Engagement Certification Progress</h2>
+                        
+                        <div class="flex flex-col md:flex-row items-center gap-8">
+                            <div class="relative w-48 h-48 md:w-56 md:h-56 flex-shrink-0">
+                                <svg class="w-full h-full" viewBox="0 0 120 120">
+                                    <circle class="progress-circle-bg" cx="60" cy="60" r="54" fill="none" stroke-width="12"></circle>
+                                    <circle class="progress-circle-fg" cx="60" cy="60" r="54" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="339.29" stroke-dashoffset="186.6"></circle> <text x="50%" y="50%" text-anchor="middle" dy=".3em" class="text-3xl font-bold font-montserrat fill-brand-copper dark:fill-brand-yellow">45%</text>
+                                </svg>
+                            </div>
+                            
+                            <div class="text-center md:text-left">
+                                <p class="text-lg text-gray-600 dark:text-gray-300">You've earned <strong class="font-bold text-brand-copper dark:text-brand-yellow">45 out of 100</strong> required points. Keep up the great work!</p>
+                                
+                                <div class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                                    <p><strong class="font-semibold text-gray-700 dark:text-gray-300">Originally Earned:</strong> May 15, 2025</p>
+                                    <p><strong class="font-semibold text-gray-700 dark:text-gray-300">Credential Number:</strong> 12345-67890</p>
+                                </div>
+
+                                <div class="mt-6 w-full">
+                                    <h3 class="text-xl font-bold font-montserrat text-gray-700 dark:text-gray-200 mb-4">Competency Status:</h3>
+                                    <ul class="space-y-4">
+
+                                        <li class="w-full">
+                                            <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 mb-1">
+                                                <span class="font-bold text-gray-800 dark:text-gray-100">Knowledge</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400">30/30 Required Units</span>
+                                                <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300 ml-auto">Completed</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                                <div class="bg-green-500 h-2.5 rounded-full" style="width: 100%"></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="w-full">
+                                            <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 mb-1">
+                                                <span class="font-bold text-gray-800 dark:text-gray-100">Skills</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400">15/20 Required Units</span>
+                                                <span class="text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300 ml-auto">In Progress</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                                <div class="bg-yellow-500 h-2.5 rounded-full" style="width: 75%"></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="w-full">
+                                            <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 mb-1">
+                                                <span class="font-bold text-gray-800 dark:text-gray-100">Actions</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400">0/25 Required Units</span>
+                                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300 ml-auto">Start Now</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 0%"></div>
+                                            </div>
+                                        </li>
+
+                                        <li class="w-full">
+                                            <div class="flex flex-wrap items-center justify-between gap-x-2 gap-y-1 mb-1">
+                                                <span class="font-bold text-gray-800 dark:text-gray-100">Values</span>
+                                                <span class="text-sm text-gray-500 dark:text-gray-400">0/25 Required Units</span>
+                                                <span class="text-xs font-semibold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full dark:bg-blue-900 dark:text-blue-300 ml-auto">Start Now</span>
+                                            </div>
+                                            <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                                                <div class="bg-blue-500 h-2.5 rounded-full" style="width: 0%"></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="#" class="inline-block mt-6 text-brand-copper dark:text-brand-yellow hover:underline font-semibold">View Competency Details →</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="lg:col-span-1">
+                 <section id="my-programs">
+                    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8 h-full">
+                        <h2 class="text-2xl md:text-3xl font-bold font-montserrat text-gray-800 dark:text-gray-100 mb-6">My Programs</h2>
+                        <div class="space-y-4">
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-100 mb-2">Valley Leadership Catalyze</h4>
+                                    <div class="text-sm space-y-1 mb-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-green-500 font-bold w-4 text-center">✓</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Knowledge:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">10 points</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-yellow-500 font-bold w-4 text-center">●</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Skills:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">5 points</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center mt-2 text-sm">
+                                    <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Completed</span>
+                                    <span class="text-gray-500 dark:text-gray-400">May 15, 2025</span>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-100 mb-2">Close Up AZ</h4>
+                                    <div class="text-sm space-y-1 mb-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-blue-500 font-bold w-4 text-center">►</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Knowledge:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">17 points</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-blue-500 font-bold w-4 text-center">►</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Skills:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">10 points</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center mt-2 text-sm">
+                                    <span class="text-xs font-semibold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Enrolled</span>
+                                    <span class="text-gray-500 dark:text-gray-400">Ends Aug 30, 2025</span>
+                                </div>
+                            </div>
+                            <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col justify-between">
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-gray-100 mb-2">PXU City</h4>
+                                    <div class="text-sm space-y-1 mb-3">
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-green-500 font-bold w-4 text-center">✓</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Knowledge:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">20 points</span>
+                                        </div>
+                                        <div class="flex items-center gap-2">
+                                            <span class="text-yellow-500 font-bold w-4 text-center">●</span>
+                                            <span class="text-gray-600 dark:text-gray-300">Skills:</span>
+                                            <span class="font-semibold text-gray-800 dark:text-gray-100">10 points</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-between items-center mt-2 text-sm">
+                                    <span class="text-xs font-semibold bg-green-100 text-green-800 px-2 py-0.5 rounded-full dark:bg-green-900 dark:text-green-300">Completed</span>
+                                    <span class="text-gray-500 dark:text-gray-400">Feb 01, 2025</span>
+                                </div>
+                            </div>
+                            <a href="#" class="inline-block mt-4 w-full text-center bg-brand-red text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition">Explore More Programs</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-16">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h4 class="text-2xl font-bold font-montserrat mb-4">Civic Shift</h4>
+                    <p class="text-gray-400">Empowering the next generation of civic leaders through hands-on education and community engagement.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Explore</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Student Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Competency Details</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">For Organizations</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Become a Partner</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">X/Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 py-6">
+                <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                    <p>&copy; 2025 Civic Shift. All Rights Reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

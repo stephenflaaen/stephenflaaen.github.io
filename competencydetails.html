@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Competency Details - Civic Shift</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700;900&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'media', // Detects OS-level dark mode preference
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#002868',
+                        'brand-red': '#BF0A30',
+                        'brand-yellow': '#DDBD09',
+                        'brand-copper': '#CE5C17',
+                    },
+                    fontFamily: {
+                        montserrat: ['Montserrat', 'sans-serif'],
+                        merriweather: ['Merriweather', 'serif'],
+                        raleway: ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Simple transition for accordion content visibility */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-raleway text-gray-700 dark:bg-gray-900 dark:text-gray-300">
+
+    <header id="main-header" class="bg-white sticky top-0 z-50 shadow-md dark:bg-gray-800 dark:border-b dark:border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brand-blue font-montserrat dark:text-white">
+                <a href="#">[LOGO]</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Home</a>
+                <a href="competencydetails.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+                <a href="partners.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Partners</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">About Us</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="studentprofile.html" class="text-brand-blue hover:underline dark:text-blue-400 dark:hover:text-blue-300">Log In</a>
+                <a href="#" class="bg-brand-red text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition">Sign Up Now</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 dark:bg-gray-800">
+            <a href="home.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Home</a>
+            <a href="competencydetails.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+            <a href="partners.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Partners</a>
+            <a href="aboutus.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">About Us</a>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                <a href="studentprofile.html" class="block py-2 text-brand-blue dark:text-blue-400">Log In</a>
+                <a href="#" class="block mt-2 bg-brand-red text-white font-bold py-2 px-4 rounded-lg text-center">Sign Up Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="py-16 md:py-24 bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold font-montserrat text-brand-blue dark:text-white mb-4">The Civic Engagement Competency Model</h1>
+                <p class="max-w-3xl mx-auto text-lg text-gray-600 dark:text-gray-400 font-raleway">
+                    Our model is designed to provide a holistic framework for developing lifelong skills in civic engagement. Explore the competencies below to see how you can get certified.
+                </p>
+            </div>
+        </section>
+
+        <section class="py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-3xl font-bold font-montserrat text-center mb-12 dark:text-white">Civic Competency Breakdown</h2>
+                
+                <div class="space-y-4" id="competency-accordion">
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-montserrat font-bold text-xl text-brand-blue dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+                            <h3>Knowledge</h3>
+                            <span class="accordion-icon">
+                                <svg class="w-6 h-6 icon-plus" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                <svg class="w-6 h-6 icon-minus hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-gray-200 dark:border-gray-700">
+                                <p class="mb-4 text-gray-600 dark:text-gray-400">Develop skills in organizing, facilitating, and empowering community members to achieve common goals. This competency focuses on building collaborative projects and fostering inclusive environments. Requires 120 points for certification.</p>
+                                <h4 class="font-merriweather font-bold text-lg mb-2 text-gray-800 dark:text-gray-200">Programs that fulfill this competency:</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner C] Neighborhood Action Training</a></li>
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner D] Public Speaking for Leaders</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-montserrat font-bold text-xl text-brand-blue dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+                           <h3>Skills</h3>
+                           <span class="accordion-icon">
+                                <svg class="w-6 h-6 icon-plus" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                <svg class="w-6 h-6 icon-minus hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-gray-200 dark:border-gray-700">
+                                <p class="mb-4 text-gray-600 dark:text-gray-400">Understand the legislative process and learn how to effectively advocate for policies that benefit your community. This competency covers research, communication, and strategic engagement with policymakers. Requires 150 points for certification.</p>
+                                <h4 class="font-merriweather font-bold text-lg mb-2 text-gray-800 dark:text-gray-200">Programs that fulfill this competency:</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner E] Lobbying 101 Bootcamp</a></li>
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner F] Policy Analysis & Briefing Creation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-montserrat font-bold text-xl text-brand-blue dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+                            <h3>Actions</h3>
+                             <span class="accordion-icon">
+                                <svg class="w-6 h-6 icon-plus" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                <svg class="w-6 h-6 icon-minus hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-gray-200 dark:border-gray-700">
+                                <p class="mb-4 text-gray-600 dark:text-gray-400">Detailed description of what this competency involves, its learning outcomes, and the total points required. Engage responsibly and effectively in online communities, understand media literacy, and protect your digital identity. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Requires 100 points for certification.</p>
+                                <h4 class="font-merriweather font-bold text-lg mb-2 text-gray-800 dark:text-gray-200">Programs that fulfill this competency:</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><a href="/link-to-program-1" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner A] Digital Safety Workshop</a></li>
+                                    <li><a href="/link-to-program-2" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner B] Media Literacy Initiative</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border border-gray-200 dark:border-gray-700 rounded-lg">
+                        <button class="accordion-toggle w-full flex justify-between items-center p-5 text-left font-montserrat font-bold text-xl text-brand-blue dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800">
+                            <h3>Values</h3>
+                            <span class="accordion-icon">
+                                <svg class="w-6 h-6 icon-plus" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                                <svg class="w-6 h-6 icon-minus hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6"></path></svg>
+                            </span>
+                        </button>
+                        <div class="accordion-content">
+                            <div class="p-5 border-t border-gray-200 dark:border-gray-700">
+                                <p class="mb-4 text-gray-600 dark:text-gray-400">Engage in direct action to address community needs through structured volunteer opportunities. This competency emphasizes reflection, empathy, and understanding the root causes of social issues. Requires 200 points (based on hours) for certification.</p>
+                                <h4 class="font-merriweather font-bold text-lg mb-2 text-gray-800 dark:text-gray-200">Programs that fulfill this competency:</h4>
+                                <ul class="list-disc list-inside space-y-2">
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner G] Annual River Cleanup Drive</a></li>
+                                    <li><a href="#" class="text-brand-copper hover:underline dark:text-yellow-400 dark:hover:text-yellow-300">[Partner H] Food Bank Volunteer Program</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h4 class="text-2xl font-bold font-montserrat mb-4">[LOGO]</h4>
+                    <p class="text-gray-400">Short mission statement placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Explore</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Student Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Competency Details</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">For Organizations</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Become a Partner</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">[FB SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[Insta SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[X/Twitter SVG]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 py-6">
+                <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                    <p>&copy; 2025 Civic Shift. All Rights Reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    
+        // Optional: Add a subtle shadow to the sticky header on scroll
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-lg');
+            } else {
+                header.classList.remove('shadow-lg');
+            }
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+
+                // Toggle icon visibility
+                const icon = button.querySelector('.accordion-icon');
+                icon.querySelector('.icon-plus').classList.toggle('hidden');
+                icon.querySelector('.icon-minus').classList.toggle('hidden');
+
+                // Toggle content visibility
+                if (accordionContent.style.maxHeight) {
+                    accordionContent.style.maxHeight = null;
+                } else {
+                    accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
+                } 
+            });
+        });
+    </script>
+
+</body>
+</html>

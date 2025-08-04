@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners - Civic Shift</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@700;900&family=Raleway:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'media', // or 'class'
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blue': '#002868',
+                        'brand-red': '#BF0A30',
+                        'brand-yellow': '#DDBD09',
+                        'brand-copper': '#CE5C17',
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'merriweather': ['Merriweather', 'serif'],
+                        'raleway': ['Raleway', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-700 dark:bg-gray-900 dark:text-gray-300 font-raleway">
+
+    <header id="main-header" class="bg-white sticky top-0 z-50 shadow-md dark:bg-gray-800 dark:border-b dark:border-gray-700">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-brand-blue font-montserrat dark:text-white">
+                <a href="#">[LOGO]</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="home.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Home</a>
+                <a href="competencydetails.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+                <a href="partners.html" class="font-bold text-brand-blue transition dark:text-white">Partners</a>
+                <a href="aboutus.html" class="text-gray-700 hover:text-brand-blue transition dark:text-gray-300 dark:hover:text-white">About Us</a>
+            </div>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="studentprofile.html" class="text-brand-blue hover:underline dark:text-blue-400 dark:hover:text-blue-300">Log In</a>
+                <a href="#" class="bg-brand-red text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition">Sign Up Now</a>
+            </div>
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 dark:bg-gray-800">
+            <a href="home.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Home</a>
+            <a href="competencydetails.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">Competency Details</a>
+            <a href="partners.html" class="block py-2 font-bold text-brand-blue dark:text-white">Partners</a>
+            <a href="aboutus.html" class="block py-2 text-gray-700 hover:text-brand-blue dark:text-gray-300 dark:hover:text-white">About Us</a>
+            <div class="border-t border-gray-200 dark:border-gray-700 mt-4 pt-4">
+                <a href="studentprofile.html" class="block py-2 text-brand-blue dark:text-blue-400">Log In</a>
+                <a href="#" class="block mt-2 bg-brand-red text-white font-bold py-2 px-4 rounded-lg text-center">Sign Up Now</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-white dark:bg-gray-800">
+            <div class="container mx-auto px-6 py-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-extrabold font-montserrat text-brand-blue dark:text-white">Our Partners</h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">We are proud to collaborate with these leading Arizona organizations to create opportunity.</p>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row gap-4 mb-10">
+                    <select class="w-full md:w-auto flex-1 p-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-brand-blue focus:border-brand-blue transition">
+                        <option>Filter by Category</option>
+                        <option>Education</option>
+                        <option>Technology</option>
+                        <option>Community</option>
+                        <option>Corporate</option>
+                    </select>
+                    <select class="w-full md:w-auto flex-1 p-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-brand-blue focus:border-brand-blue transition">
+                        <option>Filter by Region</option>
+                        <option>Maricopa County</option>
+                        <option>Pima County</option>
+                        <option>Statewide</option>
+                    </select>
+                    <input type="search" placeholder="Search by Name..." class="w-full md:w-auto flex-2 p-3 border border-gray-300 rounded-lg bg-white dark:bg-gray-700 dark:border-gray-600 dark:text-white focus:ring-brand-blue focus:border-brand-blue transition">
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+1" alt="Partner Logo 1" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+2" alt="Partner Logo 2" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+3" alt="Partner Logo 3" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+4" alt="Partner Logo 4" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+5" alt="Partner Logo 5" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+6" alt="Partner Logo 6" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+7" alt="Partner Logo 7" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+8" alt="Partner Logo 8" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+9" alt="Partner Logo 9" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+10" alt="Partner Logo 10" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+11" alt="Partner Logo 11" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                    <a href="#" class="block p-4 bg-white rounded-lg shadow-md hover:shadow-xl dark:bg-gray-800 dark:hover:bg-gray-700 transition duration-300 transform hover:-translate-y-1">
+                        <img src="https://placehold.co/150x80/e2e8f0/adb5bd?text=LOGO+12" alt="Partner Logo 12" class="mx-auto h-20 object-contain filter grayscale hover:grayscale-0 transition duration-300">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white dark:bg-gray-800 py-20">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-4xl font-bold font-montserrat text-brand-blue dark:text-white">Join Our Network of Changemakers</h2>
+                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Interested in becoming a partner? Fill out our interest form and our team will be in touch.</p>
+                </div>
+                
+                <form action="#" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="org-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Organization Name</label>
+                            <input type="text" name="org-name" id="org-name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-brand-blue focus:border-brand-blue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="contact-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Contact Name</label>
+                            <input type="text" name="contact-name" id="contact-name" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-brand-blue focus:border-brand-blue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Contact Email</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-brand-blue focus:border-brand-blue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                        </div>
+                        <div>
+                            <label for="website" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Website</label>
+                            <input type="url" name="website" id="website" class="mt-1 block w-full px-4 py-3 border border-gray-300 rounded-lg shadow-sm focus:ring-brand-blue focus:border-brand-blue dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white">
+                        </div>                        
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="w-full md:w-auto inline-flex justify-center py-3 px-8 border border-transparent shadow-sm text-base font-bold rounded-lg text-white bg-brand-red hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-red dark:focus:ring-offset-gray-800 transition">
+                            Submit Form
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h4 class="text-2xl font-bold font-montserrat mb-4">[LOGO]</h4>
+                    <p class="text-gray-400">Short mission statement placeholder text. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Explore</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Student Profile</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Competency Details</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partners</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">For Organizations</h5>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Become a Partner</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Partner Login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider mb-4">Connect</h5>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">[FB SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[Insta SVG]</a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">[X/Twitter SVG]</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6">
+                <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+                    <p>&copy; 2025 Civic Shift. All Rights Reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                        <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js" defer></script>
+</body>
+</html>

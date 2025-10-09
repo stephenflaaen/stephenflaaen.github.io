@@ -32,4 +32,4 @@ window.addEventListener('scroll', () => {
                     accordionContent.style.maxHeight = accordionContent.scrollHeight + "px";
                 } 
             });
-        });
+        });        
